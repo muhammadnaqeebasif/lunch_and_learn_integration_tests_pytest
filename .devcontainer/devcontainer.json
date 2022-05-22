@@ -12,6 +12,9 @@
 			"NODE_VERSION": "none"
 		}
 	},
+	"containerEnv": {
+		"DOCKER_ENV_PATH": "${localWorkspaceFolder}/tests/integration/docker_environment"
+	},
 	"mounts": [
 		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
 	],

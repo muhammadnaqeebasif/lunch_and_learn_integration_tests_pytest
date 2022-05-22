@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  configdb:
+    container_name: repman
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+        MYSQL_DATABASE: 'replicatormanager'
+        MYSQL_USER: 'user'
+        MYSQL_PASSWORD: 'password'
+        MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+        - '3305:3306'
+    volumes:
+        - $DOCKER_ENV_PATH/mysql:/docker-entrypoint-initdb.d
+
+    expose:
+        - '3306'
+    healthcheck:
+        test: "/usr/bin/mysql --user=root --password=password --execute \"SHOW DATABASES;\""
+        interval: 2s
+        timeout: 20s
+        retries: 10

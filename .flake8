@@ -4,7 +4,7 @@ max-line-length = 120
 application-import-names = django_tutorial,tests
 import-order-style = google
 per-file-ignores =
-    tests/*:S101,WPS442,WPS118,WPS226,WPS202,WPS201
+    tests/*:S101,WPS442,WPS118,WPS226,WPS202,WPS201,ANN401
     __main__.py:WPS421
 docstring-convention = google
 max-local-variables = 10
