@@ -1,0 +1,10 @@
+[flake8]
+ignore = D100,D101,D102,D103,D104,D107,E203,Q000,W503,WPS237,WPS305,WPS306,WPS348
+max-line-length = 120
+application-import-names = django_tutorial,tests
+import-order-style = google
+per-file-ignores =
+    tests/*:S101,WPS442,WPS118,WPS226,WPS202,WPS201
+    __main__.py:WPS421
+docstring-convention = google
+max-local-variables = 10
