@@ -1,4 +1,4 @@
-# Django Tutorial
+# Lunch And Learn Integration tests with pytest
 A template for all new Python projects to follow.
 
 ## Getting Started
